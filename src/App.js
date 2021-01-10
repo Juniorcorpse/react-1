@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Sobre from './pages/Sobre';
+import Categoria from './pages/Categoria';
 
 
 function App() {
@@ -19,6 +20,15 @@ function App() {
             <li>
               <Link to="/sobre" >SOBRE</Link>
             </li>
+            <li>
+              <Link to="/categoria/esportes" >Esportes</Link>
+            </li>
+            <li>
+              <Link to="/categoria/noticias" >Notícias</Link>
+            </li>
+            <li>
+              <Link to="/categoria/viagens" >Viagens</Link>
+            </li>
           </ul>
         </nav>
       </header>
@@ -29,6 +39,9 @@ function App() {
         </Route>
         <Route path="/sobre">
          <Sobre />
+        </Route>
+        <Route path="/categoria/:cat">
+         <Categoria />
         </Route>
       </Switch>
       <hr/>
